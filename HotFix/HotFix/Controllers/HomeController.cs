@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotFix.Models;
+using HotFix.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,15 @@ namespace HotFix.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Welcome";
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(LoginModel model)
+        {
+            if (UserService.GetInstance().LoginUser(model))
+                return View();
             return View();
         }
 

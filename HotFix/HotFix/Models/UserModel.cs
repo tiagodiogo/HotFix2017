@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 
 namespace HotFix.Models
@@ -12,11 +13,13 @@ namespace HotFix.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public enum Roles { USER, COMPANY, MUNICIPAL};
+
+        public Roles Role;
+
         public AddressModel Address { get; set; }
 
         public DateTime BirthDate { get; set; }
 
-
-        public abstract bool IsBackEndUser();
     }
 }
