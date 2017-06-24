@@ -104,6 +104,7 @@
   <ItemGroup>
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\homepage.css" />
     <Content Include="assets\css\Site.css" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
