@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotFix.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,11 +7,12 @@ using System.Web.Mvc;
 
 namespace HotFix.Controllers
 {
-    public class CultureController : Controller
+    public class WorkController : Controller
     {
         public ActionResult Index()
         {
-            return View();
+            var works = WorkService.GetInstance().GetWorks();
+            return View(works);
         }
     }
 }
