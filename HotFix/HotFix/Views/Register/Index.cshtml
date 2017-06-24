@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="jumbotron" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-md-6">
+
+            <p class="h2">Account info</p>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="text" class="form-control" id="registrationemail" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password :</label>
+                <input type="text" class="form-control" id="registrationpassword" />
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password :</label>
+                <input type="text" class="form-control" id="confirmPassword" />
+            </div>
+
+            <div class="form-group">
+                <label for="firsName">First Name :</label>
+                <input type="text" class="form-control" id="firstName" />
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name :</label>
+                <input type="text" class="form-control" id="lastName" />
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Birthdate :</label>
+                <input type="date" class="form-control" id="birthdate" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p class="h2">Address Info</p>
+            <div class="form-group">
+                <label for="street">Street :</label>
+                <input type="text" class="form-control" id="street" />
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country :</label>
+                <input type="text" class="form-control" id="country" />
+            </div>
+
+            <div class="form-group">
+                <label for="postalcode">Postal Code :</label>
+                <input type="text" class="form-control" id="postalcode" />
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 40px;">
+        <div class="form-group text-center">
+            <a class="btn btn-primary col-sm-offset-4 col-sm-4 col-xs-12" onclick="submitRegistration()">Submit</a>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    function submitRegistration() {
+           $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Register", "Register")',
+                    data: getRegistrationModel(),
+                    success: function (resultData) {
+                        alert("submited!")
+                        window.location.reload()
+                    },
+                    error: function (resultData) {
+                        alert("oh noooooo")
+                    }
+            });
+    }
+
+
+    function getRegistrationModel() {
+        var email = $("#registrationemail");
+        var password = $("#registrationpassword");
+        var firstName = $("#firstName");
+        var lastName = $("#lastName");
+        var birthDate = $("#birthdate");
+        var street = $("#street");
+        var city = $("#city");
+        var country = $("#country");
+        var postalCode = $("#postalcode");
+        return {
+            "Email": email.val(),
+            "Password": password.val(),
+            "FirstName": firstName.val(),
+            "LastName": lastName.val(),
+            "BirthDate": birthDate.val(),
+            "Address": {
+                "Street": street.val(),
+                "City": city.val(),
+                "Country": country.val(),
+                "PostalCode": postalCode.val()
+            }
+        };
+    
+    }
+
+
+        function SubmitLogin() {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Login", "Home")',
+                data: getLoginModel(),
+                success: function (resultData) {
+                    alert("login ok")
+                    window.location.href = "@Url.Action("Index", "Home")"
+                },
+                error: function (resultData) {
+                    alert("oh noooooo")
+                }
+        });
+    }
+
+</script>
+
+
+
