@@ -179,13 +179,10 @@
     <Content Include="Views\Work\Index.cshtml" />
     <Content Include="Views\Shared\_LoginForm.cshtml" />
     <Content Include="Views\Events\Create.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\User\UserInfoPartial.cshtml" />
-=======
     <Content Include="Views\Events\Details.cshtml" />
     <Content Include="Views\Housing\Create.cshtml" />
->>>>>>> 3bda03a929b9bb3007f4bcc6125eba2648467d10
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
