@@ -73,7 +73,7 @@
                     data: getRegistrationModel(),
                     success: function (resultData) {
                         alert("submited!")
-                        window.location.reload()
+                        window.location.href = "@Url.Action("Index","Home")"
                     },
                     error: function (resultData) {
                         alert("oh noooooo")
@@ -108,21 +108,6 @@
     
     }
 
-
-        function SubmitLogin() {
-            $.ajax({
-                type: "POST",
-                url: '@Url.Action("Login", "Home")',
-                data: getLoginModel(),
-                success: function (resultData) {
-                    alert("login ok")
-                    window.location.href = "@Url.Action("Index", "Home")"
-                },
-                error: function (resultData) {
-                    alert("oh noooooo")
-                }
-        });
-    }
 
 </script>
 

@@ -107,6 +107,7 @@
     <Content Include="assets\css\homepage.css" />
     <Content Include="assets\css\layout.css" />
     <Content Include="assets\img\handshake.jpg" />
+    <Content Include="assets\img\profile-picture-default.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -173,6 +174,7 @@
     <Content Include="Views\Shared\_LoginForm.cshtml" />
     <Content Include="Views\Events\Create.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\User\UserInfoPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
