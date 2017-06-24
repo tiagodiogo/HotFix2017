@@ -1,0 +1,55 @@
+﻿@model HotFix.Models.UserModel
+
+
+@{
+    ViewBag.Title = "UserInfoPartial";
+}
+
+<div class="container">
+        <div class="form-group">
+            <label for="firstNameInput">First Name: </label>
+            <input type="text" id="firstNameInput" value="@Model.FirstName" hidden />
+            <text id="firstNameValue">@Model.FirstName</text>
+        </div>
+
+        <div class="form-group">
+            <label for="lastNameInput">Last Name: </label>
+            <input type="text" id="lastNameInput" value="@Model.LastName" hidden/>
+            <text id="lastNameValue">@Model.LastName</text>
+        </div>
+
+        <div class="form-group">
+            <label for="birthDateInput">Birth Date: </label>
+            <input type="date" id="birthDateInput" value="@Model.BirthDate.ToString("dd-mm-yyyy")" hidden/>
+            <text id="birthDateValue">@Model.BirthDate.ToString("dd-mm-yyyy")</text>
+        </div>
+
+
+        <h3>Address Info</h3>
+
+
+        <div class="form-group">
+            <label for="streetInput">Street : </label>
+            <input type="text" id="streetInput" value="@Model.Address.Street" hidden/>
+            <text id="streetValue">@Model.Address.Street </text>
+        </div>
+
+        <div class="form-group">
+            <label for="cityInput">City : </label>
+            <input type="text" id="cityInput" value="@Model.Address.City" hidden/>
+            <text id="cityValue">@Model.Address.City</text>
+        </div>
+
+        <div class="form-group">
+            <label for="countryInput">Country : </label>
+            <input type="text" id="countryInput" value="@Model.Address.Country" hidden />
+            <text id="countryValue">@Model.Address.Country</text>
+        </div>
+
+
+        <div class="form-group">
+            <label for="postalCodeInput">Postal Code : </label>
+            <input type="text" id="postalCodeInput" value="@Model.Address.PostalCode" hidden />
+            <text id="postalCodeValue">@Model.Address.PostalCode</text>
+        </div>
+    </div>

@@ -31,6 +31,7 @@ namespace HotFix.Controllers
         [HttpPost]
         public HttpResponseMessage Login(LoginModel model)
         {
+
             if (UserService.GetInstance().LoginUser(model))
                 return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             return new HttpResponseMessage(System.Net.HttpStatusCode.Forbidden)

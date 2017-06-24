@@ -7,7 +7,6 @@ namespace HotFix.Models
 {
     public class AddressModel
     {
-        public int Id { get; set; }
         public string Street { get; set; }
         //public string County { get; set; }
         public string City { get; set; }

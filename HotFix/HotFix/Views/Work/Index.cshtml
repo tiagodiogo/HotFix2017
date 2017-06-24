@@ -18,9 +18,9 @@
     <div class="row">
         @foreach (var work in Model)
         {
-            <div class="col-sm-12 col-md-4">
-                <div class="thumbnail" style="margin-bottom: 10px">
-                    <img src="@work.Picture" alt="work picture" height="40">
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail" style="margin-bottom: 10px; background-color: #f2f2f2">
+                    <img src="@work.Picture" alt="work picture" style="height:100%;max-height:80px;margin-top:10px">
                     <div class="caption">
                         <h3>@work.Name</h3>
                         <p>@work.JobDescription</p>
