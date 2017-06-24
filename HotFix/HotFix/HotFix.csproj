@@ -128,6 +128,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HousingController.cs" />
     <Compile Include="Controllers\PressController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WorkController.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,6 +145,7 @@
     <Compile Include="Models\RefugeeModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Webservices\AuthController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +176,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\img\" />
+    <Folder Include="Views\Register\" />
     <Folder Include="Webservices\Models\" />
   </ItemGroup>
   <PropertyGroup>

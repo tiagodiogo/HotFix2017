@@ -7,11 +7,9 @@ namespace HotFix.Models
 {
     public class RefugeeModel : UserModel
     {
-
-
-        public override bool IsBackEndUser()
+        public RefugeeModel()
         {
-            return false;
+            Role = Roles.USER;
         }
     }
 }
