@@ -24,6 +24,7 @@ namespace HotFix
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             //INITIALIZE USERSERVICE
             UserService.GetInstance();
+            EventsService.GetInstance();
         }
     }
 }
