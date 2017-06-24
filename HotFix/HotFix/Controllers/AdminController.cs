@@ -8,6 +8,14 @@ namespace HotFix.Controllers
 {
     public class AdminController : Controller
     {
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewBag.User = Session["user"];
+            if (ViewBag.User == null)
+                filterContext.Result = new RedirectResult("/Home");
+            base.OnActionExecuting(filterContext);
+        }
+
         public ActionResult Index()
         {
             return View();

@@ -9,6 +9,15 @@ namespace HotFix.Controllers
 {
     public class WorkController : Controller
     {
+
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewBag.User = Session["user"];
+            if (ViewBag.User == null)
+                filterContext.Result = new RedirectResult("/Home");
+            base.OnActionExecuting(filterContext);
+        }
+
         public ActionResult Index()
         {
             var works = WorkService.GetInstance().GetWorks();
@@ -19,13 +28,6 @@ namespace HotFix.Controllers
         {
             return View();
         }
-
-        protected override void OnActionExecuting(ActionExecutingContext filterContext)
-        {
-            ViewBag.User = Session["user"];
-
-            base.OnActionExecuting(filterContext);
-
-        }
+        
     }
 }
