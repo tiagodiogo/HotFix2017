@@ -11,7 +11,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />z
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/layout.css" rel="stylesheet" type="text/css" />
     <script src="~/assets/js/jquery-3.2.1.min.js"></script>
     <script src="~/assets/js/bootstrap.min.js"></script>
     <script>
@@ -65,7 +66,7 @@
                     @if (isLoggedIn)
                     {
                         <li><a href="@Url.Action("index", "work")">Work</a></li>
-                        <li><a href="@Url.Action("index", "housing")">Housing</a></li>
+                        <li><a href="@Url.Action("index", "housing")">Sleep</a></li>
                         <li><a href="@Url.Action("index", "food")">Eat</a></li>
                         <li><a href="@Url.Action("index", "events")">Live</a></li>
                         <li><a href="@Url.Action("index", "culture")">Learn</a></li>

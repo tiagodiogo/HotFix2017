@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace HotFix.Controllers
 {
-    public class WorkController : Controller
+    public class CultureController : Controller
     {
         public ActionResult Index()
         {

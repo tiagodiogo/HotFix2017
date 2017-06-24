@@ -22,9 +22,11 @@ namespace HotFix
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //INITIALIZE USERSERVICE
+            //INITIALIZE SERVICES
             UserService.GetInstance();
             EventsService.GetInstance();
+            WorkService.GetInstance();
+            HousingService.GetInstance();
         }
     }
 }
