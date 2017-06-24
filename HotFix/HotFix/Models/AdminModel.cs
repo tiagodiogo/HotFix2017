@@ -8,6 +8,9 @@ namespace HotFix.Models
 {
     public class AdminModel : UserModel
     {
-
+        public AdminModel(Roles role)
+        {
+            Role = role;
+        }
     }
 }

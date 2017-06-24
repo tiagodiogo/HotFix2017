@@ -16,7 +16,44 @@ namespace HotFix.Services
 
         private UserService()
         {
-            
+            LoginModel user1 = new LoginModel()
+            {
+                Email = "user1@user1.com",
+                Password = "12345"
+            };
+            LoginModel admin = new LoginModel()
+            {
+                Email = "hotfix@hotfix.com",
+                Password = "admin"
+            };
+
+            credentials.Add(user1);
+            credentials.Add(admin);
+
+            var Address = new AddressModel()
+            {
+                City = "Lisboa",
+                Country = "Portugal",
+                PostalCode = "2790-485",
+                Street = "Rua das cenas"
+            };
+
+            users.Add(user1, new RefugeeModel()
+            {
+                FirstName = "FirstName",
+                LastName = "LastName",
+                Email = "user1@user1.com",
+                BirthDate = DateTime.Parse("27-07-1991"),
+                Address = Address
+            });
+            users.Add(admin, new AdminModel(UserModel.Roles.MUNICIPAL)
+            {
+                FirstName = "FirstName",
+                LastName = "LastName",
+                Email = "user1@user1.com",
+                BirthDate = DateTime.Parse("27-07-1991"),
+                Address = Address
+            });
         }
 
         public static UserService GetInstance()

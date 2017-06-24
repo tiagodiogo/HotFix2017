@@ -13,8 +13,10 @@ namespace HotFix.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Welcome";
+            ViewBag.User = null;
             return View();
         }
+
 
 
         [HttpPost]
