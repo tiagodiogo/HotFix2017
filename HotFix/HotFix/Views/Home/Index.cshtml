@@ -2,16 +2,55 @@
     ViewBag.Title = "Index";
 }
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+<link href="~/assets/css/homepage.css" rel="stylesheet" type="text/css" />
+
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <div class="slide-1"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Hack For Good</h1>
+                    <h3>Fundação Calouste Gulbenkian</h3>
+                </hgroup>
+                <a href="#square_section" class="btn btn-hero btn-lg" role="button">Read More</a>
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-2"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Hack For Good</h1>
+                    <h3>Fundação Calouste Gulbenkian</h3>
+                </hgroup>
+                <a href="#square_section" class="btn btn-hero btn-lg" role="button">Read More</a>
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-3"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Hack For Good</h1>
+                    <h3>Fundação Calouste Gulbenkian</h3>
+                </hgroup>
+                <a href="#square_section" class="btn btn-hero btn-lg" role="button">Read More</a>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="container">
+
+<div id="square_section"class="container">
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">

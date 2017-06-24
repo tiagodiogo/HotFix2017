@@ -104,7 +104,9 @@
   <ItemGroup>
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\homepage.css" />
     <Content Include="assets\css\Site.css" />
+    <Content Include="assets\img\handshake.jpg" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -172,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\img\" />
     <Folder Include="Webservices\Models\" />
   </ItemGroup>
   <PropertyGroup>

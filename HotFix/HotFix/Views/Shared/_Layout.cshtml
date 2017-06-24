@@ -21,25 +21,69 @@
                 <a class="navbar-brand" href="#">Good Fix</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="www.google.com">What is</a></li>
+                    <li><a href="www.google.com">How does it work</a></li>
+                    <li><a href="www.google.com">Login</a></li>
+                </ul>
             </div><!--/.navbar-collapse -->
         </div>
     </nav>
 
     @RenderBody()
 
-    <div class="container">
-        <footer>
-            <p>&copy; 2016 Company, Inc.</p>
+    
+        <footer class="footer-bs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-brand animated fadeInLeft">
+                        <h2>Good Fix</h2>
+                        <p>Transforming strangers on a strange land</p>
+                        <p>© 2017 HotFix, All rights reserved</p>
+                    </div>
+                    <div class="col-md-4 footer-nav animated fadeInUp">
+                        <h4>Helpfull Links —</h4>
+                        <div class="col-md-6">
+                            <ul class="pages">
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Nature</a></li>
+                                <li><a href="#">Explores</a></li>
+                                <li><a href="#">Science</a></li>
+                                <li><a href="#">Advice</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 footer-social animated fadeInDown">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">RSS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-ns animated fadeInRight">
+                        <h4>Newsletter</h4>
+                        <p>Regular updates of what's to come</p>
+                        <p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="me@email.com">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
-    </div>
-</body>
+    </body>
 </html>
