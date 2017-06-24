@@ -11,6 +11,14 @@ namespace HotFix.Controllers
 {
     public class EventsController : Controller
     {
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewBag.User = Session["user"];
+            if (ViewBag.User == null)
+                filterContext.Result = new RedirectResult("/Home");
+            base.OnActionExecuting(filterContext);
+        }
+
         public ActionResult Index()
         {
             var events = EventsService.GetInstance().GetEvents();
