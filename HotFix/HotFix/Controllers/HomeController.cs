@@ -39,5 +39,13 @@ namespace HotFix.Controllers
             };
         }
 
+        
+        public ActionResult LogOut()
+        {
+            Session["user"] = null;
+            ViewBag.User = null;
+            return View("Index");
+        }
+
     }
 }
