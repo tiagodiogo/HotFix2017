@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace HotFix.Controllers
 {
-    public class HomeController : Controller
+    public class HousingController : Controller
     {
+        // GET: Housing
         public ActionResult Index()
         {
-            ViewBag.Title = "Welcome";
             return View();
         }
-
     }
 }

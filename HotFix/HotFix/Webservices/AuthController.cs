@@ -1,4 +1,4 @@
-﻿using HotFix.Webservices.Models;
+﻿using HotFix.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
