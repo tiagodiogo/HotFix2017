@@ -161,6 +161,7 @@
     <Content Include="Views\Press\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Work\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
