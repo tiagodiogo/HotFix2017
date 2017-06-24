@@ -7,5 +7,10 @@ namespace HotFix.Models
 {
     public class HousingModel
     {
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public AddressModel Address { get; set; }
+        public UserModel CreatedBy { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }
