@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using HotFix.Models;
+
+@{ 
+    var currentUser = ViewBag.User as UserModel;
+    bool isLoggedIn = currentUser != null;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,6 +14,11 @@
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/assets/js/jquery-3.2.1.min.js"></script>
     <script src="~/assets/js/bootstrap.min.js"></script>
+    <script>
+        function ShowLoginForm() {
+            alert("yes")
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,7 +36,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="www.google.com">What is</a></li>
                     <li><a href="www.google.com">How does it work</a></li>
-                    <li><a href="www.google.com">Login</a></li>
+                    @if (!isLoggedIn) {
+                        <li><a href="#" onclick="ShowLoginForm()">Login</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("Logout","Home")">Logout</a></li>
+                    }
                 </ul>
             </div><!--/.navbar-collapse -->
         </div>
