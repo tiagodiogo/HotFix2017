@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotFix.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,15 @@ namespace HotFix.Controllers
 {
     public class HousingController : Controller
     {
-        // GET: Housing
         public ActionResult Index()
         {
             return View();
+        }
+
+
+        public ActionResult AddHousing(HousingModel model) {
+            return View();
+
         }
     }
 }
