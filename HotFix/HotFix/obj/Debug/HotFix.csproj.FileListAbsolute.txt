@@ -53,3 +53,6 @@ C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotF
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.csprojResolveAssemblyReference.cache
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.dll
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.pdb
+C:\Personal\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.csprojResolveAssemblyReference.cache
+C:\Personal\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.dll
+C:\Personal\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.pdb
