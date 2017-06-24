@@ -12,7 +12,7 @@ namespace HotFix.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        //public string AddressModel { get; set; }
+        public AddressModel Address { get; set; }
 
         public DateTime BirthDate { get; set; }
 
