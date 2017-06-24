@@ -130,6 +130,7 @@
     <Compile Include="Controllers\PressController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\CultureController.cs" />
     <Compile Include="Controllers\WorkController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,6 +146,7 @@
     <Compile Include="Models\RefugeeModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EventsService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Webservices\AuthController.cs" />
   </ItemGroup>
@@ -166,6 +168,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Work\Index.cshtml" />
     <Content Include="Views\Shared\_LoginForm.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,7 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\img\" />
     <Folder Include="Views\Register\" />
     <Folder Include="Webservices\Models\" />
   </ItemGroup>
@@ -190,7 +192,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64294</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

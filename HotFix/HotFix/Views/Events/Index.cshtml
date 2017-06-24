@@ -1,7 +1,69 @@
-﻿@{
+﻿@using HotFix.Models
+@model List<EventModel>
+
+@{
     ViewBag.Title = "Events";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<body>
+@*<body>
     <img src="~/Content/Images/construction.jpg" />
-</body>
+
+</body>*@
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Events near you</h1>
+            <p>Here you can find a list of social events near you. You can also create a new event!</p>
+            <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Events")" role="button">Create Event</a></p>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        @foreach (var e in Model)
+        {
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="..." alt="...">
+                    <div class="caption">
+                        <h3>@e.Name</h3>
+                        <p>@e.Description</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        }
+        @*<div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>*@
+    </div>
+
+</div>
