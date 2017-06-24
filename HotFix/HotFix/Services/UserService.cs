@@ -16,6 +16,8 @@ namespace HotFix.Services
 
         private UserService()
         {
+
+            System.Globalization.CultureInfo cultureinfo = new System.Globalization.CultureInfo("pt-PT");
             LoginModel user1 = new LoginModel()
             {
                 Email = "user1@user1.com",
@@ -43,7 +45,7 @@ namespace HotFix.Services
                 FirstName = "FirstName",
                 LastName = "LastName",
                 Email = "user1@user1.com",
-                BirthDate = DateTime.Parse("27-07-1991"),
+                BirthDate = DateTime.Parse("27/07/1991", cultureinfo),
                 Address = Address
             });
             users.Add(admin, new AdminModel(UserModel.Roles.MUNICIPAL)
@@ -51,7 +53,7 @@ namespace HotFix.Services
                 FirstName = "FirstName",
                 LastName = "LastName",
                 Email = "user1@user1.com",
-                BirthDate = DateTime.Parse("27-07-1991"),
+                BirthDate = DateTime.Parse("27/07/1991", cultureinfo),
                 Address = Address
             });
         }

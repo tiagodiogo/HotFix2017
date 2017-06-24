@@ -24,16 +24,16 @@ namespace HotFix.Services
 
             WorkModel work1 = new WorkModel()
             {
-                Name = "Instituto Sup. de Agronomia",
+                Name = "Instituto Agronomia",
                 JobDescription = "Forestry",
                 Picture = "https://www.isa.ulisboa.pt/files/logo_green.png",
                 Address = address
             };
             WorkModel work2 = new WorkModel()
             {
-                Name = "Robert Mauser",
-                JobDescription = "Soldering",
-                Picture = "https://mauser.pt/data/logo-site_left2014n.png",
+                Name = "Cintell Corp",
+                JobDescription = "Marketing",
+                Picture = "http://cintell.net/wp/wp-content/uploads/2015/01/Cintell_Logo_Print_v1.0.png",
                 Address = address
             };
 
