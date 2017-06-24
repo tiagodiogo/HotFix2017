@@ -101,10 +101,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\construction.jpg" />
-    <Content Include="Content\Site.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\Site.css" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -150,13 +151,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\Food\Index.cshtml" />
-    <Content Include="Views\Housing\Index.cshtml" />
-    <Content Include="Views\Press\Index.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\Work\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,6 +160,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\img\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Events\" />
+    <Folder Include="Views\Food\" />
+    <Folder Include="Views\Housing\" />
+    <Folder Include="Views\Press\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Work\" />
+    <Folder Include="Webservices\Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
