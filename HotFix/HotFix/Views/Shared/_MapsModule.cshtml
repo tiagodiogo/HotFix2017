@@ -1,0 +1,8 @@
+﻿@model HotFix.Models.GMapsModel
+@{
+    ViewBag.Title = "_MapsModule";
+}
+
+<iframe src="https://www.google.com/maps/embed/v1/place?q=@Html.Encode(Model.Query)
+      &zoom=16
+      &key=AIzaSyA0P_MwQux1ddzIwaq36acOarX9AUJfAqk"/>
