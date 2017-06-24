@@ -130,12 +130,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
     <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\FoodModel.cs" />
     <Compile Include="Models\HousingModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\PressModel.cs" />
     <Compile Include="Models\RefugeeModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
