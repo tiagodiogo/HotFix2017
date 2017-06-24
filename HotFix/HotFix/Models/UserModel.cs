@@ -21,5 +21,12 @@ namespace HotFix.Models
 
         public DateTime BirthDate { get; set; }
 
+        public string ProfilePicture { get; set; }
+
+        public UserModel()
+        {
+            ProfilePicture = "/assets/img/profile-picture-default.png";
+        }
+
     }
 }

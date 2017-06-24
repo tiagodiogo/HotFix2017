@@ -58,6 +58,27 @@ namespace HotFix.Services
             });
         }
 
+        internal void AddNewUser(RegistrationModel model)
+        {
+            LoginModel creds = new LoginModel()
+            {
+                Email = model.Email,
+                Password = model.Password
+            };
+            RefugeeModel user = new RefugeeModel()
+            {
+                Email = model.Email,
+                Address = model.Address,
+                BirthDate = model.BirthDate,
+                FirstName = model.FirstName,
+                LastName = model.LastName
+            };
+
+            credentials.Add(creds);
+            users.Add(creds, user);
+            LoginUser(creds);
+        }
+
         public static UserService GetInstance()
         {
             if (Instance == null)
