@@ -15,7 +15,7 @@ namespace HotFix.Controllers
         }
 
         public ActionResult AddEvent(EventModel model) {
-
+            return View();
         }
     }
 }

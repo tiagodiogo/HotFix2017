@@ -17,7 +17,7 @@ namespace HotFix.Controllers
 
         public ActionResult AddFood(FoodModel model)
         {
-
+            return View();
         }
     }
 }
