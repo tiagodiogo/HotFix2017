@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -153,6 +154,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Food\Index.cshtml" />
+    <Content Include="Views\Housing\Index.cshtml" />
+    <Content Include="Views\Press\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Work\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,13 +171,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\img\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Events\" />
-    <Folder Include="Views\Food\" />
-    <Folder Include="Views\Housing\" />
-    <Folder Include="Views\Press\" />
-    <Folder Include="Views\User\" />
-    <Folder Include="Views\Work\" />
     <Folder Include="Webservices\Models\" />
   </ItemGroup>
   <PropertyGroup>
