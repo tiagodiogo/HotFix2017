@@ -23,6 +23,11 @@ namespace HotFix.Services
             return Instance;
         }
 
+        public EventModel GetEvent(int id)
+        {
+            return events.Where(x => x.Id == id).FirstOrDefault();
+        }
+
         public List<EventModel> GetEvents()
         {
             return events;
@@ -34,11 +39,14 @@ namespace HotFix.Services
             {
                 EventModel newEvent = new EventModel();
                 newEvent.Address = new AddressModel();
+                int id = events.Count + 1;
 
                 //populate fields
+                newEvent.Id = id;
                 newEvent.Name = model.Name;
                 newEvent.Category = model.Category;
                 newEvent.Description = model.Description;
+                newEvent.Time = model.Time;
                 newEvent.CreatedAt = model.CreatedAt;
                 newEvent.CreatedBy = model.CreatedBy;
                 newEvent.Address.Street = model.Street;

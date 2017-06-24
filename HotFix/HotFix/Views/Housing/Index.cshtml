@@ -1,7 +1,42 @@
-﻿@{
+﻿@using HotFix.Models
+@model List<HousingModel>
+
+@{
     ViewBag.Title = "Housing";
 }
 
-<body>
-    <img src="~/Content/Images/construction.jpg" />
-</body>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Houses</h1>
+        <p>Here you can find a list of places where you can live or stay for a while.</p>
+        <p>Also, if you have a place where you can invite people in, you can create it here!</p>
+        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>
+    </div>
+</div>
+<br />
+<div class="row">
+    @foreach (var e in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/assets/img/house.jpg" alt="...">
+                <div class="caption">
+                    <h2>@e.Name</h2>
+                    <div class="form-inline">
+                        <label class="control-label">Description</label>
+                        <p>@e.Description</p>
+                        <label class="control-label">Category</label>
+                        <p>@e.Category</p>
+                        <label class="control-label">Rooms</label>
+                        <p>@e.Rooms</p>
+                        <label class="control-label">Street</label>
+                        <p>@e.Address.Street</p>
+                        <label class="control-label">City</label>
+                        <p>@e.Address.City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

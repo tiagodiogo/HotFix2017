@@ -17,6 +17,14 @@ namespace HotFix.Controllers
             return View(events);
         }
 
+        public ActionResult Details(int id)
+        {
+            var model = EventsService.GetInstance().GetEvent(id);
+            if (model == null)
+                return RedirectToAction("Index");
+            return View("Details", model);
+        }
+
         public ActionResult Create() 
         {
             return View("Create");

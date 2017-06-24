@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HotFix.Services;
 
 namespace HotFix.Controllers
 {
@@ -12,12 +13,25 @@ namespace HotFix.Controllers
         
         public ActionResult Index()
         {
-            return View();
+            var model = FoodService.GetInstance().GetRest();
+            return View(model);
         }
 
-        public ActionResult AddFood(FoodModel model)
+        public ActionResult Create()
         {
-            return View();
+            return View("Create");
+        }
+
+        [HttpPost]
+        public ActionResult AddFood(FoodViewModel model)
+        {
+            var user = UserService.GetInstance().GetUser();
+            model.CreatedAt = DateTime.Now;
+            model.CreatedBy = user;
+
+            FoodService.GetInstance().CreateRest(model);
+
+            return RedirectToAction("Index");
         }
     }
 }

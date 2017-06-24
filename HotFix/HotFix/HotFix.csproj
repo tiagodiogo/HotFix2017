@@ -108,6 +108,7 @@
     <Content Include="assets\css\Site.css" />
     <Content Include="assets\img\event.jpg" />
     <Content Include="assets\css\layout.css" />
+    <Content Include="assets\img\food.jpg" />
     <Content Include="assets\img\handshake.jpg" />
     <Content Include="assets\img\profile-picture-default.png" />
     <Content Include="assets\img\house.jpg" />

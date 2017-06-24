@@ -1,0 +1,110 @@
+﻿@model HotFix.Models.FoodViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form class="form-horizontal" action='@Url.Action("AddFood", "Food")' method="POST">
+        <fieldset>
+            <div id="legend">
+                <legend class="">New Spot</legend>
+            </div>
+            <div class="control-group">
+                <!-- Username -->
+                <label class="control-label" for="Name">Spot Name</label>
+                <div class="controls">
+                    <input type="text" id="Name" name="Name" placeholder="" class="input-xlarge">
+                    <p class="help-block">Name of the eating spot</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="Category">Category</label>
+                <div class="controls">
+                    <input type="text" id="Category" name="Category" placeholder="" class="input-xlarge">
+                    <p class="help-block">Define a category (italian, portuguese, indian,...)</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="PriceMin">Min Price</label>
+                <div class="controls">
+                    <input type="number" id="PriceMin" name="PriceMin" placeholder="" class="input-xlarge">
+                    <p class="help-block">Minimun meal price</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="PriceMax">Max Price</label>
+                <div class="controls">
+                    <input type="number" id="PriceMax" name="PriceMax" placeholder="" class="input-xlarge">
+                    <p class="help-block">Maximum meal price</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="OpenTime">Oppening Time</label>
+                <div class="controls">
+                    <input type="text" id="OpenTime" name="OpenTime" placeholder="" class="input-xlarge">
+                    <p class="help-block">Time that the spot opens</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="CloseTime">Closing Time</label>
+                <div class="controls">
+                    <input type="text" id="CloseTime" name="CloseTime" placeholder="" class="input-xlarge">
+                    <p class="help-block">Time that the spot closes</p>
+                </div>
+            </div>
+
+            @*<div class="control-group">
+                    <!-- E-mail -->
+                    <label class="control-label" for="Image">Image</label>
+                    <div class="controls">
+                        <input type="image" id="Image" name="Image" placeholder="" class="input-xlarge">
+                        <p class="help-block"></p>
+                    </div>
+                </div>*@
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="Street">Street</label>
+                <div class="controls">
+                    <input type="text" id="Street" name="Street" placeholder="" class="input-xlarge">
+                    <p class="help-block">Local</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="City">City</label>
+                <div class="controls">
+                    <input type="text" id="City" name="City" placeholder="" class="input-xlarge">
+                    <p class="help-block">City</p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- E-mail -->
+                <label class="control-label" for="PostalCode">PostalCode</label>
+                <div class="controls">
+                    <input type="text" id="PostalCode" name="PostalCode" placeholder="" class="input-xlarge">
+                    <p class="help-block">Postal/Zip Code</p>
+                </div>
+            </div>
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <button class="btn btn-success">Register</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

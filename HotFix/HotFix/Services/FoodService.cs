@@ -28,11 +28,26 @@ namespace HotFix.Services
             return rests;
         }
 
-        public bool CreateRest(FoodModel model)
+        public bool CreateRest(FoodViewModel model)
         {
             try
             {
                 FoodModel rest = new FoodModel();
+                rest.Address = new AddressModel();
+
+                rest.Name = model.Name;
+                rest.Category = model.Category;
+                rest.PriceMin = model.PriceMin;
+                rest.PriceMax = model.PriceMax;
+                rest.Address.Street = model.Street;
+                rest.Address.City = model.City;
+                rest.Address.PostalCode = model.PostalCode;
+
+                rest.CreatedAt = model.CreatedAt;
+                rest.CreatedBy = model.CreatedBy;
+
+                rests.Add(rest);
+
                 return true;
             }
             catch (Exception e)
