@@ -24,15 +24,15 @@ namespace HotFix.Services
 
             WorkModel work1 = new WorkModel()
             {
-                Name = "Instituto Superior de Agronomia",
-                JobDescription = "Apanha de Maçãs",
+                Name = "Instituto Sup. de Agronomia",
+                JobDescription = "Forestry",
                 Picture = "https://www.isa.ulisboa.pt/files/logo_green.png",
                 Address = address
             };
             WorkModel work2 = new WorkModel()
             {
-                Name = "Mauser",
-                JobDescription = "Reparação de placas",
+                Name = "Robert Mauser",
+                JobDescription = "Soldering",
                 Picture = "https://mauser.pt/data/logo-site_left2014n.png",
                 Address = address
             };

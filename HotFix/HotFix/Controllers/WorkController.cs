@@ -14,5 +14,18 @@ namespace HotFix.Controllers
             var works = WorkService.GetInstance().GetWorks();
             return View(works);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            ViewBag.User = Session["user"];
+
+            base.OnActionExecuting(filterContext);
+
+        }
     }
 }
