@@ -50,7 +50,6 @@ C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotF
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\bin\System.Net.Http.Formatting.xml
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\bin\System.Web.Http.xml
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\bin\System.Web.Http.WebHost.xml
-C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.csprojResolveAssemblyReference.cache
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.dll
 C:\Users\Joao Recio\Documents\Visual Studio 2017\Projects\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.pdb
 C:\Personal\HotFix2017\HotFix\HotFix\obj\Debug\HotFix.csprojResolveAssemblyReference.cache
