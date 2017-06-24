@@ -27,6 +27,7 @@ namespace HotFix
             EventsService.GetInstance();
             WorkService.GetInstance();
             HousingService.GetInstance();
+            FoodService.GetInstance();
         }
     }
 }
