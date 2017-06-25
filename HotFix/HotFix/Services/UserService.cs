@@ -38,7 +38,7 @@ namespace HotFix.Services
                 City = "Lisboa",
                 Country = "Portugal",
                 PostalCode = "2790-485",
-                Street = "Rua das cenas"
+                Street = "Exemplo de Rua"
             };
 
             users.Add(user1, new RefugeeModel()
