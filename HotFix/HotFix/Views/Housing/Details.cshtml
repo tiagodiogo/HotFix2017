@@ -1,8 +1,8 @@
 ﻿@using HotFix.Models
-@model HotFix.Models.EventModel
+@model HotFix.Models.HousingModel
 
 @{
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
@@ -14,8 +14,11 @@
             <p>@Model.Description</p>
             <label>Category:</label>  <span>@Model.Category</span>
             <br />
-            <label>Time:</label>  <span>@Model.Time.ToString("dd/MM/yyyy HH:mm")</span>
-            @*<p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>*@
+            <label>Rooms</label>  <span>T @Model.Rooms</span>
+            <br />
+            <img src="~/assets/img/bed.jpg" alt="work picture" style="height:100%;max-height:120px;margin-top:10px">
+            <img src="~/assets/img/kitchen.jpg" alt="work picture" style="height:100%;max-height:120px;margin-top:10px">        
+            <img src="~/assets/img/plant.jpg" alt="work picture" style="height:100%;max-height:120px;margin-top:10px">
         </div>
     </div>
     <div class="container">

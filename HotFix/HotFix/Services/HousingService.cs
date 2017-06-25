@@ -42,6 +42,11 @@ namespace HotFix.Services
             return Instance;
         }
 
+        public HousingModel GetHouse(int id)
+        {
+            return houses.Where(x => x.Id == id).FirstOrDefault();
+        }
+
         public List<HousingModel> GetHouses()
         {
             return houses;
