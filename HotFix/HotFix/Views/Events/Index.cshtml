@@ -6,58 +6,37 @@
     //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
 
-<div class="jumbotron">
+<div class="full-event">
+    <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
+        <div class="container">
+            <h1>Events near you</h1>
+            <p>Here you can find a list of social events near you. You can also create a new event!</p>
+            <p><a class="btn btn-success btn-lg" href="@Url.Action("Create", "Events")" role="button">Create Event</a></p>
+        </div>
+    </div>
     <div class="container">
-        <h1>Events near you</h1>
-        <p>Here you can find a list of social events near you. You can also create a new event!</p>
-        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Events")" role="button">Create Event</a></p>
+        <div class="row">
+            @foreach (var e in Model)
+            {
+                <div class="col-sm-12 col-md-3">
+                    <div class="thumbnail" style="margin-bottom: 10px; background-color: #f2f2f2">
+                        <img src="@e.Image" alt="work picture" style="height:100%;max-height:80px;margin-top:10px">
+                        <div class="caption">
+                            <h3>@e.Name</h3>
+                            <p>@e.Description</p>
+                            <p>@e.Address.Street, @e.Address.City</p>
+                            <p>@e.Time</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Attend</a>
+                                <a href="#" class="btn btn-default" role="button">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
-<br />
-<div class="row">
-    @foreach (var e in Model)
-    {
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="~/assets/img/event.jpg" alt="...">
-                <div class="caption">
-                    <h3>@e.Name</h3>
-                    <i class="glyphicon glyphicon-map-marker"></i><p>@e.Address.City</p>
-                    <i class="glyphicon glyphicon-time"></i> <p>@e.Time</p>
-                    @*<p><a href="@Url.Action("Details", "Events", new { id = e.Id })" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
-                    @*<button class="btn btn-primary" data-toggle="modal" data-target="@string.Concat("#event_", e.Id)">Large modal</button>*@
-                </div>
-            </div>
-        </div>
 
-
-
-        @*<div class="modal fade" id="@string.Concat("event_",e.Id)" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"></div>
-            @*<div class="lib-panel">
-                <div class="row box-shadow">
-                    <div class="col-md-6">
-                        <img class="lib-img-show" src="~/assets/img/event.jpg">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="lib-row lib-header">
-                            Example library
-                            <div class="lib-header-seperator"></div>
-                        </div>
-                        <div class="lib-row lib-desc">
-                            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-                        </div>
-                    </div>
-                </div>
-            </div>*@
-
-        @*<div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <img src="~/assets/img/event.jpg" alt="Alternate Text" />
-                        <h1>@e.Name</h1>
-                        <p>@e.Description</p>
-                    </div>
-                </div>
-            </div>*@
-    }
-</div>

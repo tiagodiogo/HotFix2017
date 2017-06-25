@@ -12,6 +12,7 @@ namespace HotFix.Models
         public string Category { get; set; }
         public string Description { get; set; }
         public int Rooms { get; set; }
+        public string Image { get; set; }
         public AddressModel Address { get; set; }
         public UserModel CreatedBy { get; set; }
         public DateTime CreatedAt { get; set; }

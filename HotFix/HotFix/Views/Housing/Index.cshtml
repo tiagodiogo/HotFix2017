@@ -5,38 +5,38 @@
     ViewBag.Title = "Housing";
 }
 
-
-<div class="jumbotron">
-    <div class="container">
-        <h1>Houses</h1>
-        <p>Here you can find a list of places where you can live or stay for a while.</p>
-        <p>Also, if you have a place where you can invite people in, you can create it here!</p>
-        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>
+<link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
+<div class="full-house">
+    <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
+        <div class="container">
+            <h1>Houses</h1>
+            <p>Here you can find a list of places where you can live or stay for a while.</p>
+            <p>Also, if you have a place where you can invite people in, you can create it here!</p>
+            @*<p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>*@
+        </div>
     </div>
-</div>
-<br />
-<div class="row">
-    @foreach (var e in Model)
-    {
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="~/assets/img/house.jpg" alt="...">
-                <div class="caption">
-                    <h2>@e.Name</h2>
-                    <div class="form-inline">
-                        <label class="control-label">Description</label>
-                        <p>@e.Description</p>
-                        <label class="control-label">Category</label>
-                        <p>@e.Category</p>
-                        <label class="control-label">Rooms</label>
-                        <p>@e.Rooms</p>
-                        <label class="control-label">Street</label>
-                        <p>@e.Address.Street</p>
-                        <label class="control-label">City</label>
-                        <p>@e.Address.City</p>
+    <div class="container">
+        <div class="row">
+            @foreach (var e in Model)
+            {
+                <div class="col-sm-12 col-md-3">
+                    <div class="thumbnail" style="margin-bottom: 10px; background-color: #f2f2f2">
+                        <img src="@e.Image" alt="work picture" style="height:100%;max-height:80px;margin-top:10px">
+                        <div class="caption">
+                            <h3>@e.Name</h3>
+                            <div class="caption">
+                                <p>@e.Description</p>
+                                <p>@e.Category</p>
+                                <p>T @e.Rooms</p>
+                                <p>@e.Address.Street, @e.Address.City</p>
+                                <p>@e.Address.PostalCode</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
-    }
+    </div>
+    
+
 </div>
