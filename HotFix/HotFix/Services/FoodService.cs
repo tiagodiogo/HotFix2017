@@ -13,7 +13,38 @@ namespace HotFix.Services
 
         private FoodService()
         {
+            AddressModel address = new AddressModel()
+            {
+                City = "Lisboa",
+                Country = "Portugal",
+                PostalCode = "2790-485",
+                Street = "Rua das cenas"
+            };
 
+            FoodModel food1 = new FoodModel()
+            {
+                Id = 1,
+                Name = "Nice 2 eat you",
+                Category = "Italian",
+                Address = address,
+                PriceMin = 15,
+                PriceMax = 30,
+                Image = "http://www.commodoreelite.com/Photos/Commodore-elite-restaurant-02.jpg"
+            };
+
+            FoodModel food2 = new FoodModel()
+            {
+                Id = 1,
+                Name = "Curry is life",
+                Category = "Indian",
+                Address = address,
+                PriceMin = 10,
+                PriceMax = 20,
+                Image = "http://www.barcelonaconnect.com/wp-content/uploads/2016/04/indisch.jpg"
+            };
+
+            rests.Add(food1);
+            rests.Add(food2);
         }
 
         public static FoodService GetInstance()

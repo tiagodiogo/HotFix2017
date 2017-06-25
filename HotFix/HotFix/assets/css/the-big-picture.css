@@ -50,3 +50,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.full-food {
+  background: url(https://media.timeout.com/images/103768262/image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
