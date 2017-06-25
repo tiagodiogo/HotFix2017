@@ -5,31 +5,35 @@
     ViewBag.Title = "Work Opportunities";
 }
 
-<div class="container" style="margin-top: 16px">
-    <div class="jumbotron" style="padding: 12px">
+<link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
+<div class="full-work">
+    <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
         <div class="container">
-            <h2>Work Opportunities</h2>
+            <h1>Work Opportunities</h1>
             <p>Browse and apply for a job. You will always be welcome here!</p>
+            <p>@*<a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Events")" role="button">Create Event</a>*@</p>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        @foreach (var work in Model)
-        {
-            <div class="col-sm-12 col-md-3">
-                <div class="thumbnail" style="margin-bottom: 10px; background-color: #f2f2f2">
-                    <img src="@work.Picture" alt="work picture" style="height:100%;max-height:80px;margin-top:10px">
-                    <div class="caption">
-                        <h3>@work.Name</h3>
-                        <p>@work.JobDescription</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Apply</a> 
-                        <a href="#" class="btn btn-default" role="button">Read More</a></p>
+    <div class="container">
+        <div class="row">
+            @foreach (var work in Model)
+            {
+                <div class="col-sm-12 col-md-3">
+                    <div class="thumbnail" style="margin-bottom: 10px; background-color: #f2f2f2">
+                        <img src="@work.Picture" alt="work picture" style="height:100%;max-height:80px;margin-top:10px">
+                        <div class="caption">
+                            <h3>@work.Name</h3>
+                            <p>@work.JobDescription</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Apply</a>
+                                <a href="#" class="btn btn-default" role="button">Read More</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
 
+        </div>
     </div>
+
 </div>

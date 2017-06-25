@@ -1,0 +1,40 @@
+/*!
+ * Start Bootstrap - The Big Picture (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+	/*margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;*/
+}
+
+
+.navbar {
+    background-color: #222 !important;
+}
+
+.full-event {
+  background: url(https://adrianinitiative.files.wordpress.com/2015/11/event-3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.full-work {
+  background: url(http://cdn.wallpapersafari.com/60/62/Q4Ta0L.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.full-house {
+  background: url(http://newtechnaukri.com/wp-content/uploads/2017/02/Bloomsbury-Infrastructure-Convicity-A-apartments-for-rent-in-troy-ny.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
