@@ -43,8 +43,8 @@ namespace HotFix.Services
 
             users.Add(user1, new RefugeeModel()
             {
-                FirstName = "FirstName",
-                LastName = "LastName",
+                FirstName = "João",
+                LastName = "Récio",
                 Email = "user1@user1.com",
                 BirthDate = DateTime.Parse("27/7/1991", cultureinfo),
                 Address = Address
