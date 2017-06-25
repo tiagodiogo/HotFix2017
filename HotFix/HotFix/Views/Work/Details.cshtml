@@ -1,8 +1,8 @@
 ﻿@using HotFix.Models
-@model HotFix.Models.EventModel
+@model HotFix.Models.WorkModel
 
 @{
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
@@ -11,10 +11,10 @@
     <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
         <div class="container">
             <h1>@Model.Name</h1>
-            <p>@Model.Description</p>
+            <p>@Model.JobDescription</p>
             <label>Category:</label>  <span>@Model.Category</span>
             <br />
-            <label>Time:</label>  <span>@Model.Time.ToString("dd/MM/yyyy HH:mm")</span>
+            @*<label>Time:</label>  <span>@Model.Time.ToString("dd/MM/yyyy HH:mm")</span>*@
             @*<p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>*@
         </div>
     </div>

@@ -7,56 +7,59 @@
 <style>
     .row{
         margin-top : 20px;
+        margin-right : 0px;
+        margin-left: 0px;
     }
 </style>
 
+<link href="~/assets/css/the-big-picture.css" rel="stylesheet" />
+
 <body>
-    <div class="container">
-        <div class="row" style="display:flex; justify-content:center; padding-top:10px;">
-            <div class="col-md-3" >
-                <div class="row">
-                    <div class="h3 text-center">
-                        @Model.FirstName @Model.LastName
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="thumbnail">
-                        <img class="img-responsive" src="@Model.ProfilePicture" style="position:center;"/>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="col-md-8 col-md-offset-1 hidden-sm hidden-xs">
-                <div class="row" id="tabs">
-                    <ul class="nav nav-tabs">
-                        <li class="active" ><a data-toggle="tab" href="#info">Info <i class="glyphicon glyphicon-info-sign"></i></a></li>
-                        <li><a data-toggle="tab" href="#schedule">Schedule <i class="glyphicon glyphicon-calendar"></i></a></li>
-                        <li><a data-toggle="tab" href="#connections">Connections <i class="glyphicon glyphicon-user"></i></a></li>
-                        <li><a data-toggle="tab" href="#history">Activities <i class="glyphicon glyphicon-time"></i></a></li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <div id="info" class="tab-pane fade in active">
-                        <div id="user-info">
-                            @Html.Partial("UserInfoPartial", Model)
+    <div class="full-user">
+        <div class="container" style="padding-bottom: 40px;">
+            <div class="row" style="display:flex; justify-content:center; padding-top:10px;">
+                <div class="col-md-3 col-xs-12 opaque img-rounded">
+                    <div class="row">
+                        <div class="h3 text-center">
+                            @Model.FirstName @Model.LastName
                         </div>
                     </div>
-                    <div id="history" class="tab-pane fade">
-                        <h3>Past Activities</h3>
-                        <p>Some content in menu 1.</p>
+
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="@Model.ProfilePicture" style="position:center;" />
+                        </div>
                     </div>
-                    <div id="connections" class="tab-pane fade">
-                        <h3>My Connections</h3>
-                        <p>Some content in menu 2.</p>
+
+
+                </div>
+                <div class="col-md-8 col-md-offset-1 col-xs-12 opaque img-rounded">
+                    <div class="row" id="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#info">Info <i class="glyphicon glyphicon-info-sign"></i></a></li>
+                            <li><a data-toggle="tab" href="#schedule">Schedule <i class="glyphicon glyphicon-calendar"></i></a></li>
+                            <li><a data-toggle="tab" href="#connections">Connections <i class="glyphicon glyphicon-user"></i></a></li>
+                            <li><a data-toggle="tab" href="#history">Activities <i class="glyphicon glyphicon-time"></i></a></li>
+                        </ul>
                     </div>
-                    <div id="schedule" class="tab-pane fade">
-                        <h3>My Schedule</h3>
-                        <p>Some content in menu 2.</p>
+                    <div class="tab-content">
+                        <div id="info" class="tab-pane fade in active">
+                            <div id="user-info">
+                                @Html.Partial("UserInfoPartial", Model)
+                            </div>
+                        </div>
+                        <div id="history" class="tab-pane fade">
+                            @Html.Partial("UserActivityPartial")
+                        </div>
+                        <div id="connections" class="tab-pane fade">
+                            @Html.Partial("UserConnectionsPartial")
+                        </div>
+                        <div id="schedule" class="tab-pane fade">
+                            @Html.Partial("UserSchedulePartial")
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 </body>

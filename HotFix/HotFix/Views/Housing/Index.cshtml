@@ -9,7 +9,7 @@
 <div class="full-house">
     <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
         <div class="container">
-            <h1>Housesing</h1>
+            <h1>Housing</h1>
             <p>Here you can find a list of places where you can live or stay for a while.</p>
             <p>Also, if you have a place where you can invite people in, you can create it here!</p>
             @*<p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Housing")" role="button">Create House</a></p>*@
@@ -32,7 +32,7 @@
                                 <p>@e.Address.PostalCode</p>
                                 <p>
                                     <a href="#" class="btn btn-primary" role="button">Apply</a>
-                                    <a href="#" class="btn btn-default" role="button">Read More</a>
+                                    <a href="@Url.Action("Details", "Housing", new { id = e.Id })" class="btn btn-default" role="button">Read More</a>
                                 </p>
                             </div>
                         </div>

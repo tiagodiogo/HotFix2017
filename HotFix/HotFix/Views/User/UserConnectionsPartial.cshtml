@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "UserConnectionsPartial";
+    List<HotFix.Models.UserModel> userExamples = HotFix.Services.UserService.GetInstance().GetUserExamples();
+}
+
+
+<div style="margin-top: 20px;">
+    <ul class="list-group">
+        @foreach (var user in userExamples)
+        {
+            <li class="list-group-item row">
+                <div class="col-sm-2 thumbnail">
+                    <img class="img-responsive" src="@user.ProfilePicture" style="cursor:pointer"/>
+                </div>
+                <div class="col-sm-offset-1 col-sm-8">
+                    <div class="row">
+                        @user.FirstName @user.LastName
+                    </div>
+                    <div class="row">
+                        <a href="mailto:@user.Email"><i class="glyphicon glyphicon-envelope"></i> Get in touch!</a>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

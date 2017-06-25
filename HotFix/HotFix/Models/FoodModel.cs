@@ -7,10 +7,12 @@ namespace HotFix.Models
 {
     public class FoodModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public int PriceMin { get; set; }
         public int PriceMax { get; set; }
+        public string Image { get; set; }
         public DateTime OpenTime { get; set; }
         public DateTime CloseTime { get; set; }
         public AddressModel Address { get; set; }

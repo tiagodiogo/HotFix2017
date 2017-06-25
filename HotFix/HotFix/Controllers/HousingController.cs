@@ -29,6 +29,14 @@ namespace HotFix.Controllers
             return View("Create");
         }
 
+        public ActionResult Details(int id)
+        {
+            var model = HousingService.GetInstance().GetHouse(id);
+            if (model == null)
+                return RedirectToAction("Index");
+            return View("Details", model);
+        }
+
         [HttpPost]
         public ActionResult AddHouse(HousingViewModel model)
         {
