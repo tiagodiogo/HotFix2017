@@ -13,7 +13,25 @@ namespace HotFix.Services
 
         private HousingService()
         {
+            AddressModel address = new AddressModel()
+            {
+                City = "Lisboa",
+                Country = "Portugal",
+                PostalCode = "2790-485",
+                Street = "Rua das cenas"
+            };
 
+            HousingModel house = new HousingModel() 
+            {
+                Name = "Cozy Apartment",
+                Description = "Great apartment near the center of Lisbon",
+                Category = "Apartment",
+                Rooms = 3,
+                Address = address,
+                Image = "http://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/3799-9/verde-apartments-kitchen-and-living-room.jpg"
+            };
+
+            houses.Add(house);
         }
 
         public static HousingService GetInstance()

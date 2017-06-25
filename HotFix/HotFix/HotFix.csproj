@@ -113,6 +113,7 @@
     <Content Include="assets\css\homepage.css" />
     <Content Include="assets\css\Site.css" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\css\the-big-picture.css" />
     <Content Include="assets\img\event.jpg" />
     <Content Include="assets\css\layout.css" />
     <Content Include="assets\img\food.jpg" />
