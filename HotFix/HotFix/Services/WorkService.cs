@@ -24,6 +24,7 @@ namespace HotFix.Services
 
             WorkModel work1 = new WorkModel()
             {
+                Id = 1,
                 Name = "Instituto Agronomia",
                 JobDescription = "Forestry",
                 Picture = "https://www.isa.ulisboa.pt/files/logo_green.png",
@@ -31,6 +32,7 @@ namespace HotFix.Services
             };
             WorkModel work2 = new WorkModel()
             {
+                Id = 2,
                 Name = "Cintell Corp",
                 JobDescription = "Marketing",
                 Picture = "http://cintell.net/wp/wp-content/uploads/2015/01/Cintell_Logo_Print_v1.0.png",
@@ -46,6 +48,11 @@ namespace HotFix.Services
             if (Instance == null)
                 Instance = new WorkService();
             return Instance;
+        }
+
+        public WorkModel GetWork(int id)
+        {
+            return works.Where(x => x.Id == id).FirstOrDefault();
         }
 
         public List<WorkModel> GetWorks()

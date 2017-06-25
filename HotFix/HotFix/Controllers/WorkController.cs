@@ -26,8 +26,15 @@ namespace HotFix.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
-        
+
+        public ActionResult Details(int id)
+        {
+            var model = WorkService.GetInstance().GetWork(id);
+            if (model == null)
+                return RedirectToAction("Index");
+            return View("Details", model);
+        }
     }
 }

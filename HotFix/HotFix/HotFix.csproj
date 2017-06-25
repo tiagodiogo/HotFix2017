@@ -213,6 +213,7 @@
     <Content Include="Views\User\UserConnectionsPartial.cshtml" />
     <Content Include="Views\User\UserActivityPartial.cshtml" />
     <Content Include="Views\Housing\Details.cshtml" />
+    <Content Include="Views\Work\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
