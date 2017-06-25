@@ -111,13 +111,15 @@
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\homepage.css" />
-    <Content Include="assets\css\Site.css" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\css\the-big-picture.css" />
+    <Content Include="assets\img\bed.jpg" />
     <Content Include="assets\img\event.jpg" />
     <Content Include="assets\css\layout.css" />
     <Content Include="assets\img\food.jpg" />
     <Content Include="assets\img\handshake.jpg" />
+    <Content Include="assets\img\kitchen.jpg" />
+    <Content Include="assets\img\plant.jpg" />
     <Content Include="assets\img\profile-icon.png" />
     <Content Include="assets\img\profile-picture-default.png" />
     <Content Include="assets\img\house.jpg" />
@@ -188,7 +190,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -211,6 +212,7 @@
     <Content Include="Views\User\UserSchedulePartial.cshtml" />
     <Content Include="Views\User\UserConnectionsPartial.cshtml" />
     <Content Include="Views\User\UserActivityPartial.cshtml" />
+    <Content Include="Views\Housing\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

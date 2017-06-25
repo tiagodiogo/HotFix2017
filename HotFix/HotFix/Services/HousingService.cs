@@ -23,6 +23,7 @@ namespace HotFix.Services
 
             HousingModel house = new HousingModel() 
             {
+                Id = 1,
                 Name = "Cozy Apartment",
                 Description = "Great apartment near the center of Lisbon",
                 Category = "Apartment",
@@ -39,6 +40,11 @@ namespace HotFix.Services
             if (Instance == null)
                 Instance = new HousingService();
             return Instance;
+        }
+
+        public HousingModel GetHouse(int id)
+        {
+            return houses.Where(x => x.Id == id).FirstOrDefault();
         }
 
         public List<HousingModel> GetHouses()
