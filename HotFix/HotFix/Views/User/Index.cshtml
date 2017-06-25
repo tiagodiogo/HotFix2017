@@ -11,9 +11,9 @@
 </style>
 
 <body>
-    <div class="container">
+    <div class="container" style="margin-bottom: 40px;">
         <div class="row" style="display:flex; justify-content:center; padding-top:10px;">
-            <div class="col-md-3" >
+            <div class="col-md-3 col-xs-12" >
                 <div class="row">
                     <div class="h3 text-center">
                         @Model.FirstName @Model.LastName
@@ -28,7 +28,7 @@
                 
 
             </div>
-            <div class="col-md-8 col-md-offset-1 hidden-sm hidden-xs">
+            <div class="col-md-8 col-md-offset-1 col-xs-12">
                 <div class="row" id="tabs">
                     <ul class="nav nav-tabs">
                         <li class="active" ><a data-toggle="tab" href="#info">Info <i class="glyphicon glyphicon-info-sign"></i></a></li>
@@ -44,16 +44,13 @@
                         </div>
                     </div>
                     <div id="history" class="tab-pane fade">
-                        <h3>Past Activities</h3>
-                        <p>Some content in menu 1.</p>
+                        @Html.Partial("UserActivityPartial")
                     </div>
                     <div id="connections" class="tab-pane fade">
-                        <h3>My Connections</h3>
-                        <p>Some content in menu 2.</p>
+                        @Html.Partial("UserConnectionsPartial")
                     </div>
                     <div id="schedule" class="tab-pane fade">
-                        <h3>My Schedule</h3>
-                        <p>Some content in menu 2.</p>
+                        @Html.Partial("UserSchedulePartial")
                     </div>
                 </div>
             </div>

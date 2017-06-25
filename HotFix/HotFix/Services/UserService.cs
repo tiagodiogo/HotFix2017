@@ -8,6 +8,7 @@ namespace HotFix.Services
 {
     public class UserService
     {
+        private static List<UserModel> userExamples = new List<UserModel>();
 
         private static List<LoginModel> credentials = new List<LoginModel>();
         private static Dictionary<LoginModel, UserModel> users = new Dictionary<LoginModel, UserModel>();
@@ -56,6 +57,8 @@ namespace HotFix.Services
                 BirthDate = DateTime.Parse("27/7/1991", cultureinfo),
                 Address = Address
             });
+
+            InitializeUserExamples();
         }
 
         internal void AddNewUser(RegistrationModel model)
@@ -105,6 +108,41 @@ namespace HotFix.Services
             {
                 return null;
             }
+        }
+
+        public List<UserModel> GetUserExamples()
+        {
+            return userExamples;
+        }
+
+
+
+        private void InitializeUserExamples()
+        {
+            userExamples.Add(new RefugeeModel()
+            {
+                Address = new AddressModel(),
+                FirstName = "Joao",
+                LastName = "Chitas",
+                Email = "mailDoChitas@gmail.com"
+            });
+
+            userExamples.Add(new RefugeeModel()
+            {
+                Address = new AddressModel(),
+                FirstName = "Joao",
+                LastName = "Recio",
+                Email = "mailDoRecio@gmail.com"
+            });
+
+            userExamples.Add(new RefugeeModel()
+            {
+                Address = new AddressModel(),
+                FirstName = "Tiago",
+                LastName = "Diogo",
+                Email = "mailDoTD@gmail.com"
+            });
+
         }
     }
 }

@@ -208,6 +208,9 @@
     <Content Include="Views\Housing\Create.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
     <Content Include="Views\Shared\_MapsModule.cshtml" />
+    <Content Include="Views\User\UserSchedulePartial.cshtml" />
+    <Content Include="Views\User\UserConnectionsPartial.cshtml" />
+    <Content Include="Views\User\UserActivityPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
