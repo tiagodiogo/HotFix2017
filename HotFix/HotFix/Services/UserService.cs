@@ -45,7 +45,7 @@ namespace HotFix.Services
                 FirstName = "FirstName",
                 LastName = "LastName",
                 Email = "user1@user1.com",
-                BirthDate = DateTime.Parse("27/07/1991", cultureinfo),
+                BirthDate = DateTime.Parse("27/7/1991", cultureinfo),
                 Address = Address
             });
             users.Add(admin, new AdminModel(UserModel.Roles.MUNICIPAL)
@@ -53,7 +53,7 @@ namespace HotFix.Services
                 FirstName = "FirstName",
                 LastName = "LastName",
                 Email = "user1@user1.com",
-                BirthDate = DateTime.Parse("27/07/1991", cultureinfo),
+                BirthDate = DateTime.Parse("27/7/1991", cultureinfo),
                 Address = Address
             });
         }
