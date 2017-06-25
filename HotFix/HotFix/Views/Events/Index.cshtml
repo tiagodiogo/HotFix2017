@@ -30,7 +30,7 @@
                             <p>@e.Time</p>
                             <p>
                                 <a href="#" class="btn btn-primary" role="button">Attend</a>
-                                <a href="#" class="btn btn-default" role="button">Read More</a>
+                                <a href="@Url.Action("Details", "Events", new { id = e.Id })" class="btn btn-default" role="button">Read More</a>
                             </p>
                         </div>
                     </div>
