@@ -11,10 +11,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/assets/css/layout.css" rel="stylesheet" type="text/css" />
     <script src="~/assets/js/jquery-3.2.1.min.js"></script>
     <script src="~/assets/js/bootstrap.min.js"></script>
+
+    <link href="~/fonts/glyphicons-halflings-regular.ttf" rel="stylesheet" />
+    <link href="~/fonts/glyphicons-halflings-regular.eot" rel="stylesheet" />
+    <link href="~/fonts/glyphicons-halflings-regular.svg" rel="stylesheet" />
+    <link href="~/fonts/glyphicons-halflings-regular.woff" rel="stylesheet" />
+
     <script>
 
 
@@ -64,12 +71,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (isLoggedIn)
                     {
-                        <li><a href="@Url.Action("index", "work")">Work</a></li>
-                        <li><a href="@Url.Action("index", "housing")">Sleep</a></li>
-                        <li><a href="@Url.Action("index", "food")">Eat</a></li>
-                        <li><a href="@Url.Action("index", "events")">Live</a></li>
-                        <li><a href="@Url.Action("index", "culture")">Learn</a></li>
-                        <li><a href="@Url.Action("index", "press")">News</a></li>
+                        <li><a href="@Url.Action("index", "work")">Work <i class="glyphicon glyphicon-briefcase"></i></a></li>
+                        <li><a href="@Url.Action("index", "housing")">Sleep <i class="glyphicon glyphicon-home"></i></a></li>
+                        <li><a href="@Url.Action("index", "food")">Eat <i class="glyphicon glyphicon-glass"></i></a></li>
+                        <li><a href="@Url.Action("index", "events")">Live <i class="glyphicon glyphicon-heart-empty"></i></a></li>
+                        <li><a href="@Url.Action("index", "culture")">Learn <i class="glyphicon glyphicon-book"></i></a></li>
+                        <li><a href="@Url.Action("index", "press")">News <i class="glyphicon glyphicon-bullhorn"></i></a></li>
                     }
                     else
                     {
@@ -118,9 +125,9 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@currentUser.FirstName @currentUser.LastName<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="@Url.Action("Index","User")">My Account</a></li>
+                                <li><a href="@Url.Action("Index","User")">My Account <i class="glyphicon glyphicon-user"></i></a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="@Url.Action("Logout","Home")">Logout</a></li>
+                                <li><a href="@Url.Action("Logout","Home")">Logout <i class="glyphicon glyphicon-off"></i></a></li>
                             </ul>
                         </li>
                     }

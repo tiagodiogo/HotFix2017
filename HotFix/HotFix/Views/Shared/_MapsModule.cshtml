@@ -1,8 +1,11 @@
 ﻿@model HotFix.Models.GMapsModel
+
 @{
-    ViewBag.Title = "_MapsModule";
+    //ViewBag.Title = "Events";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<iframe src="https://www.google.com/maps/embed/v1/place?q=@Html.Encode(Model.Query)
-      &zoom=16
-      &key=AIzaSyA0P_MwQux1ddzIwaq36acOarX9AUJfAqk"/>
+    <iframe width="100%" height="300" src="https://www.google.com/maps/embed/v1/place?q=@Html.Encode(Model.Query)
+            &zoom=14
+            &key=AIzaSyA0P_MwQux1ddzIwaq36acOarX9AUJfAqk" />
+

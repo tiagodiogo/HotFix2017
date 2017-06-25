@@ -23,6 +23,7 @@ namespace HotFix.Services
 
             HousingModel house = new HousingModel() 
             {
+                Id = 1,
                 Name = "Cozy Apartment",
                 Description = "Great apartment near the center of Lisbon",
                 Category = "Apartment",
