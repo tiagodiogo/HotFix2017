@@ -12,23 +12,23 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-5">
+        <div class="row" style="display:flex; justify-content:center; padding-top:10px;">
+            <div class="col-md-5" >
                 <div class="row">
-                    <div class="h3">
-                        Hello @Model.FirstName @Model.LastName
+                    <div class="h3 text-center">
+                        @Model.FirstName @Model.LastName
                     </div>
                 </div>
 
                 <div class="row">
-                    <div>
-                        <img class="img-responsive" src="@Model.ProfilePicture" />
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="@Model.ProfilePicture" style="position:center;"/>
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="h3">
-                        //foreach activity
+                    <div class="h3 text-center">
+                        //foreach activity Model.Activities
                     </div>
                 </div>
 
@@ -43,7 +43,6 @@
                 </div>
                 <div class="tab-content">
                     <div id="info" class="tab-pane fade in active">
-                        <h3>Info</h3>
                         <div id="user-info">
                             @Html.Partial("UserInfoPartial", Model)
                         </div>

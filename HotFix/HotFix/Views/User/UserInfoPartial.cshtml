@@ -5,51 +5,103 @@
     ViewBag.Title = "UserInfoPartial";
 }
 
-<div class="container">
-        <div class="form-group">
-            <label for="firstNameInput">First Name: </label>
-            <input type="text" id="firstNameInput" value="@Model.FirstName" hidden />
-            <text id="firstNameValue">@Model.FirstName</text>
+<div class="row" style="margin-top: 20px;">
+    <div class="col-xs-11" >
+        <div class="row h3">
+            General Info
+        </div>
+        <hr />
+        <div class="container">
+            <div class="form-group">
+                <label for="firstNameInput">First Name : </label>
+                <input type="text" id="firstNameInput" value="@Model.FirstName" hidden />
+                <text id="firstNameValue">@Model.FirstName</text>
+            </div>
+
+            <div class="form-group">
+                <label for="lastNameInput">Last Name : </label>
+                <input type="text" id="lastNameInput" value="@Model.LastName" hidden />
+                <text id="lastNameValue">@Model.LastName</text>
+            </div>
+
+            <div class="form-group">
+                <label for="birthDateInput">Birth Date : </label>
+                <input type="date" id="birthDateInput" value="@Model.BirthDate.ToString("dd-mm-yyyy")" hidden />
+                <text id="birthDateValue">@Model.BirthDate.ToString("dd-mm-yyyy")</text>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            <label for="lastNameInput">Last Name: </label>
-            <input type="text" id="lastNameInput" value="@Model.LastName" hidden/>
-            <text id="lastNameValue">@Model.LastName</text>
+        <div class="row h3">
+            Address Info
         </div>
+        <hr />
+        <div class="container">
+            <div class="form-group">
+                <label for="streetInput">Street : </label>
+                <input type="text" id="streetInput" value="@Model.Address.Street" hidden />
+                <text id="streetValue">@Model.Address.Street </text>
+            </div>
 
-        <div class="form-group">
-            <label for="birthDateInput">Birth Date: </label>
-            <input type="date" id="birthDateInput" value="@Model.BirthDate.ToString("dd-mm-yyyy")" hidden/>
-            <text id="birthDateValue">@Model.BirthDate.ToString("dd-mm-yyyy")</text>
-        </div>
+            <div class="form-group">
+                <label for="cityInput">City : </label>
+                <input type="text" id="cityInput" value="@Model.Address.City" hidden />
+                <text id="cityValue">@Model.Address.City</text>
+            </div>
 
-
-        <h3>Address Info</h3>
-
-
-        <div class="form-group">
-            <label for="streetInput">Street : </label>
-            <input type="text" id="streetInput" value="@Model.Address.Street" hidden/>
-            <text id="streetValue">@Model.Address.Street </text>
-        </div>
-
-        <div class="form-group">
-            <label for="cityInput">City : </label>
-            <input type="text" id="cityInput" value="@Model.Address.City" hidden/>
-            <text id="cityValue">@Model.Address.City</text>
-        </div>
-
-        <div class="form-group">
-            <label for="countryInput">Country : </label>
-            <input type="text" id="countryInput" value="@Model.Address.Country" hidden />
-            <text id="countryValue">@Model.Address.Country</text>
-        </div>
+            <div class="form-group">
+                <label for="countryInput">Country : </label>
+                <input type="text" id="countryInput" value="@Model.Address.Country" hidden />
+                <text id="countryValue">@Model.Address.Country</text>
+            </div>
 
 
-        <div class="form-group">
-            <label for="postalCodeInput">Postal Code : </label>
-            <input type="text" id="postalCodeInput" value="@Model.Address.PostalCode" hidden />
-            <text id="postalCodeValue">@Model.Address.PostalCode</text>
+            <div class="form-group">
+                <label for="postalCodeInput">Postal Code : </label>
+                <input type="text" id="postalCodeInput" value="@Model.Address.PostalCode" hidden />
+                <text id="postalCodeValue">@Model.Address.PostalCode</text>
+            </div>
         </div>
     </div>
+    <div class="col-xs-1">
+        <div class="row h3">
+            <button class="btn btn-primary" aria-hidden="true" onclick="EditMode()" id="edit-button">
+                <i class="glyphicon glyphicon-edit"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+<div class="row" hidden id="button-ops">
+    <button class="btn btn-success col-sm-offset-1 col-sm-5" onclick="OnSave()">
+        <i class="glyphicon glyphicon-floppy-disk"></i>
+    </button>
+    <button class="btn btn-danger col-sm-offset-1 col-sm-5 " onclick="OnCancel()">
+        <i class="glyphicon glyphicon-trash"></i>
+    </button>
+</div>
+
+<script>
+    function EditMode() {
+        $("input").show();
+        $("text").hide();
+        $("#button-ops").show();
+        $("#edit-button").hide();
+    }
+
+    function OnSave() {
+        $("input").hide();
+        $("text").show();
+        $("#button-ops").hide();
+        $("#edit-button").show();
+    }
+
+    function OnCancel() {
+        $("input").hide();
+        $("text").show();
+        $("#button-ops").hide();
+        $("#edit-button").show();
+    }
+</script>
