@@ -5,41 +5,45 @@
     ViewBag.Title = "Food";
 }
 
+<link href="~/assets/css/the-big-picture.css" rel="stylesheet" type="text/css" />
 
-<div class="jumbotron">
-    <div class="container">
-        <h1>Eating Spots</h1>
-        <p>Here you can find some eating spots in our community.</p>
-        <p>There are various places with different types of dishes that you may like :)</p>
-        <p></p>
-        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Food")" role="button">Create Food Spot</a></p>
+<div class="full-food">
+    <div class="jumbotron" style="background-color: #3c3d41; color:#fff;">
+        <div class="container">
+            <h1>Eating Spots</h1>
+            <p>Here you can find some eating spots in our community.</p>
+            <p>There are various places with different types of dishes that you may like :)</p>
+            <p></p>
+            <p>@*<a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Food")" role="button">Create Food Spot</a>*@</p>
+        </div>
     </div>
-</div>
-<br />
-<div class="row">
-    @foreach (var e in Model)
-    {
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="~/assets/img/food.jpg" alt="...">
-                <div class="caption">
-                    <h2>@e.Name</h2>
-                    <div class="form-horizontal">
-                        <label class="control-label">Category</label>
-                        <p>@e.Category</p>
-                        <label class="control-label">Price</label>
-                        <p>@e.PriceMin - @e.PriceMax</p>
-                        <label class="control-label">Open</label>
-                        <p>12:00</p>
-                        <label class="control-label">Close</label>
-                        <p>23:00</p>
-                        <label class="control-label">Street</label>
-                        <p>@e.Address.Street</p>
-                        <label class="control-label">City</label>
-                        <p>@e.Address.City</p>
+    <div class="container">
+        <div class="row">
+            @foreach (var e in Model)
+            {
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="@e.Image" alt="...">
+                        <div class="caption">
+                            <h2>@e.Name</h2>
+                            <div class="form-horizontal">
+                                <p>@e.Category</p>
+                                <p>@e.PriceMin€ - @e.PriceMax€</p>
+                                <p>12:00 - 23:00</p>
+                                <p>@e.Address.Street, @e.Address.City</p>
+                                <p>
+                                    <a href="#" class="btn btn-primary" role="button">Make Reservation</a>
+                                    <a href="@Url.Action("Details", "Food", new { id = e.Id })" class="btn btn-default" role="button">Read More</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
-    }
+    </div>
 </div>
+
+
+
+
