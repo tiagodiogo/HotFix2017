@@ -25,7 +25,7 @@ namespace HotFix.Models
 
         public UserModel()
         {
-            ProfilePicture = "/assets/img/profile-picture-default.png";
+            ProfilePicture = "/assets/img/profile-icon.png";
         }
 
     }
